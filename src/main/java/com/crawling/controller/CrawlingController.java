@@ -31,10 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CrawlingController {
 
-    Calendar cal = Calendar.getInstance();
     SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-
-    
 
 
    @GetMapping(value="/news/break/{type}")
@@ -44,7 +41,7 @@ public class CrawlingController {
         HashMap<String,String> info = new  HashMap<String,String>();
         String date = sdf.format(Calendar.getInstance().getTime());
 
-        
+
         //네이버 뉴스 속보 url
         String url ="https://news.naver.com/main/list.nhn?listType=title&mode=LSD&mid=sec&sid1="
                     + NewsEnum.valueOf(type).getCode() + "&date="+ date;
