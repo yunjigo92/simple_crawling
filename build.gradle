@@ -24,7 +24,12 @@ repositories {
 
 dependencies {
 
+	//swagger
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+	//jsoup
 	compile group: 'org.jsoup', name: 'jsoup', version: '1.10.2'
+	
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
